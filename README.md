@@ -29,6 +29,6 @@ All dependencies are managed by Maven Shade Plugin.
 
 ## TODO Feature
 * Whatsapp auto connect socket when task occure instead of always on.
-* * Taskchain to make task after socket connection
+	* Taskchain to make task after socket connection
 * Web authication QRCode isn't working properly. **Bug Fix**
 * Remote task creator with WhatsApp message to self.
