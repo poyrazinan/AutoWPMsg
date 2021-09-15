@@ -1,7 +1,5 @@
 package tr.com.poyrazinan.exceptions;
 
-import java.util.function.Supplier;
-
 public class NotInMemoryException extends Exception {
 
     /**

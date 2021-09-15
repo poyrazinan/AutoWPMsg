@@ -5,12 +5,15 @@ import it.auties.whatsapp4j.listener.WhatsappListener;
 import it.auties.whatsapp4j.response.impl.json.UserInformationResponse;
 import it.auties.whatsapp4j.whatsapp.WhatsappAPI;
 import lombok.NonNull;
-import tr.com.poyrazinan.services.CacheCreatorService;
-import tr.com.poyrazinan.utils.MessageTimer;
+import tr.com.poyrazinan.model.Task;
+import tr.com.poyrazinan.services.CacheCreator;
+import tr.com.poyrazinan.services.MessageSender;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class WhatsAppListener implements WhatsappListener {
 
-    // WhatsappAPI instance calls from constructor
     WhatsappAPI api;
 
     public WhatsAppListener(WhatsappAPI api) {
@@ -26,8 +29,8 @@ public class WhatsAppListener implements WhatsappListener {
     public void onLoggedIn(@NonNull UserInformationResponse response) {
         System.out.println("Whatsapp socket connected.");
         Main.isConnected = true;
-        new CacheCreatorService(api);
-        MessageTimer.startTimer();
+        // CacheCreator also execute waiting tasks
+        new CacheCreator(api);
     }
 
     /**
@@ -38,7 +41,6 @@ public class WhatsAppListener implements WhatsappListener {
     public void onDisconnected() {
         System.out.println("Whatsapp socket disconnected.");
         Main.isConnected = false;
-        MessageTimer.stopTimer();
     }
 
 }
