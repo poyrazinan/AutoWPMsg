@@ -1,3 +1,5 @@
+[![Java CI with Maven](https://github.com/TheGeyik/AutoWPMsg/actions/workflows/maven.yml/badge.svg)](https://github.com/TheGeyik/AutoWPMsg/actions/workflows/maven.yml)
+
 ## Features
 
 - Can schedule WhatsApp messages for a custom date.
