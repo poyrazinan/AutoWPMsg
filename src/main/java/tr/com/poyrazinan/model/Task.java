@@ -34,5 +34,4 @@ public class Task {
     public float getUnix() {
         return date.getTime() / 1000L;
     }
-
 }

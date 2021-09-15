@@ -50,9 +50,6 @@ public class MessageSender {
                                         .map(Object::toString).collect(Collectors.joining(", "))+
                     " Mesaj: " + task.getMessage());
         }
-
-        CacheCreator.awaitTasks.remove(task);
-        api.disconnect();
     }
 
     /**

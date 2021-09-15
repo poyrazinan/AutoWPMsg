@@ -5,7 +5,6 @@
 - Send a message to multiple contacts etc. (905xxxxxxxx1,905xxxxxxxx2)
 - Send message to all of your contacts with **Herkes** boolean. (evet = true, hayır = false)
 - And easy data modification with excel.
-- Making connection only when try to execute task. With this feature it's not try to have WhatsApp Web all the time and you can use WhatsApp Web without use here function. 
 
 ## Dependencies
 
@@ -29,7 +28,8 @@ All dependencies are managed by Maven Shade Plugin.
 	* [Github](https://github.com/JetBrains/java-annotations "Github")
 	
 ## TODO Feature
-* ~~Whatsapp auto connect socket when task occur instead of always on.~~
-    * ~~Taskchain to make task after socket connection~~
-* Web authentication QRCode isn't working properly. **Bug Fix**
-* ~~Remote task creator with WhatsApp message to self.~~ (Cancelled due TaskChain with Whatsapp disconnecter feature)
+* ~~Whatsapp auto connect socket when task occur instead of always on.~~ 
+    * ~~Taskchain to make task after socket connection~~ ❌
+**(Cancelled due WhatsAppWeb new Beta program. Will be update for it when release.)**
+* ~~Web authentication QRCode isn't working properly. **Bug Fix**~~ ✅
+* Remote task creator with WhatsApp message to self. ⌛

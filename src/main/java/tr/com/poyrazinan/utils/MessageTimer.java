@@ -4,7 +4,7 @@ import it.auties.whatsapp4j.whatsapp.WhatsappAPI;
 import org.jetbrains.annotations.NotNull;
 import tr.com.poyrazinan.Main;
 import tr.com.poyrazinan.model.Task;
-import tr.com.poyrazinan.services.CacheCreator;
+import tr.com.poyrazinan.services.MessageSender;
 
 import java.util.ConcurrentModificationException;
 import java.util.Timer;
@@ -29,7 +29,7 @@ public class MessageTimer {
             @Override
             public void run() {
                 try {
-                    Main.inputs.stream().forEach(MessageTimer::checkDate);
+                    Main.inputs.forEach(MessageTimer::checkDate);
                 }
                 catch (ConcurrentModificationException e)  {
                     System.out.println
@@ -50,7 +50,6 @@ public class MessageTimer {
      * @param task
      */
     private static void checkDate(@NotNull Task task) {
-
         long unixNow = System.currentTimeMillis() / 1000L;
 
         if (task.isExecuted())
@@ -58,15 +57,12 @@ public class MessageTimer {
 
         if (task.getUnix() == unixNow) {
             task.setExecuted(true);
-            CacheCreator.awaitTasks.add(task);
-            api.connect();
-            return;
-        }
-        else if (task.getUnix() < unixNow) {
-            task.setExecuted(true);
-            return;
+            MessageSender.sendMessage(task);
         }
 
-        else return;
+        else if (task.getUnix() < unixNow)
+            task.setExecuted(true);
+
+        return;
     }
 }
