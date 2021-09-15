@@ -1,0 +1,1 @@
+If you want to contribute to AutoWpMsg, make sure to base your branch off of our main branch (or a feature-branch) and create your PR into that same branch. We will be rejecting any PRs between branches or into release branches! It is very possible that your change might already be in main or you missed something.
