@@ -6,6 +6,11 @@
 - Send message to all of your contacts with **Herkes** boolean. (evet = true, hayır = false)
 - And easy data modification with excel.
 
+## Screenshots
+![image](https://user-images.githubusercontent.com/22749769/133515655-4db442e1-60fb-4d42-b4ac-614894654751.png)
+![image](https://user-images.githubusercontent.com/22749769/133515339-bd84937b-cdbc-4a1f-983c-836a81f85a3e.png)
+![image](https://user-images.githubusercontent.com/22749769/133515588-37733ddd-75a4-423e-8341-1513f82522c9.png)
+
 ## Dependencies
 
 This project requires **Java 16+**
